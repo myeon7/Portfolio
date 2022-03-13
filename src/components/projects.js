@@ -26,7 +26,7 @@ function Projects({scrollToProjects}){
             cover: lululemon_cover,
             type: "(Personal Project)",
             description: "HTML / CSS / JQuery",
-            prototype: "",
+            prototype: "https://lululemon-renewal.netlify.app/",
             time: "Apr 2021 - Jul 2021",
             // content
             task: "Lululemon website redesign to improve UI",
