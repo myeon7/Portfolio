@@ -144,6 +144,7 @@
     width:350px;
     height:420px;
     background:url(../media/profileimg/Profile-01.jpg) no-repeat center/contain;
+    // border:1px solid #fff;
 }
 .intro {
     float:right;
@@ -200,7 +201,7 @@
         cursor:pointer;
 
         .contentDetail{
-            background-color:rgba(0, 0, 0, 0.75);   
+            background-color:rgba(0, 0, 0, 0.8);   
 
             & h3 { padding-top:43%; opacity:1}
             & span { opacity:1; }
@@ -221,7 +222,7 @@
     height:300px;
     border-radius:6%;
     text-align:center;
-    background-color:rgba(0, 0, 0, 0.25);  
+    background-color:rgba(0, 0, 0, 0.2);  
 
     & h3{
         display:block;
