@@ -43,7 +43,7 @@ function Projects({scrollToProjects}){
             image2: portfolio_img2,
             text3: "You can check out my projects here. I love designing and coding!",
             image3: portfolio_img3,
-            text4: "You can see details about the project by clicking on each component from the project section. I am always available to discuss more about them! 😃",
+            text4: "You can see details about the project by clicking on each component from the project section.",
         },
         {
             title: "YouTube Clone",
@@ -65,11 +65,11 @@ function Projects({scrollToProjects}){
             description: "Python & Spotify API",
             time: "Oct 2021 - Dec 2021",
             // content
-            task: "Analyze ",
-            role: "",
-            text1: "Analyze the correlation between song features and its popularity and give recommendation of songs through machine learning using Python",
-            final_header1: "Future Plan",
-            final_text1: "Finally, ",
+            task: "Merge and clean data collected from different sources for machine learning",
+            role: "Data Cleaner & Back-End Developer (Connect Spotify API)",
+            text1: "Analyze the correlation between a popularity of songs and their features to give recommendation of songs based on user inputted song through machine learning in Python.",
+            final_header1: "",
+            final_text1: "",
         },
         {
             title: "Lululemon Renewal",

@@ -61,14 +61,6 @@ function Display({project, toggleShow}) {
                             </div>
                         }
 
-{/* ONLY FOR DESIGN */}
-
-                        {/* { project.d1 && 
-                            <div className="design_only clearfix">
-                                <div className="imgbox" style={{ backgroundImage: `url(${project.d1})` }}></div>
-                                <div className="imgbox" style={{ backgroundImage: `url(${project.d2})` }}></div>
-                            </div>
-                        } */}
 {/* PROJECT CONTENTS */}
                         <p className="inner_text">{project.text1}</p>
                         <img src={project.image1} alt=""/>
