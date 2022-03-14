@@ -300,6 +300,7 @@
     }
 }
 
+$blue: rgb(260, 170, 255);
 .inner_display{
     position:absolute;
     left:50%;
@@ -308,6 +309,14 @@
     margin:0 auto;
     width:85%;height:auto;
     // border:1px solid #fff;
+
+    a {
+        color: $blue;
+        transition: color 0.1s ease;
+        &:hover{
+            color:rgba(255, 170, 255, 0.719);
+        }
+    }
 
     .lulu_only{
         margin:30px 0 50px 0;
@@ -376,6 +385,7 @@
             top: 60px; right:0;
             font-size:1.8rem;
             font-weight:bold;
+            color: $blue;
             width:100px;
             height:30px;
             transition: opacity 0.4s ease;
