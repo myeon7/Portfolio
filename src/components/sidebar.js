@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { scrollIntoView } from "seamless-scroll-polyfill";
 import cn from "classnames";
 import './components.scss';
 
-function Sidebar({scrollToAboutme, scrollToProjects}){
+function Sidebar(){
 
     const [select, setSelect] = useState(false);
     const [main1, setMain1] = useState(true);
@@ -18,7 +19,7 @@ function Sidebar({scrollToAboutme, scrollToProjects}){
                     setMain1(!main1);
                     setMain2(!main2);
                 };
-                scrollToAboutme.current.scrollIntoView({behavior: 'smooth'});
+                scrollIntoView(document.querySelector("#c1"), { behavior: "smooth" });
                 }}>About me</span>
             <span className={cn("sidebar_content projects", { main2 })}  onClick={() => {
                 if (main2 == false) {
@@ -26,7 +27,8 @@ function Sidebar({scrollToAboutme, scrollToProjects}){
                     setMain1(!main1);
                     setMain2(!main2);
                 }
-                scrollToProjects.current.scrollIntoView({behavior: 'smooth'});
+                scrollIntoView(document.querySelector("#c2"), { behavior: "smooth" });
+
                 }}>Projects</span>
         </div>
     )

@@ -6,7 +6,7 @@ import pi4 from '../media/profileimg/Profile-04.jpg';
 import pi5 from '../media/profileimg/Profile-05.jpg';
 import pi6 from '../media/profileimg/Profile-06.jpg';
 
-function Aboutme({scrollToAboutme}){
+function Aboutme(){
 
     const [profile, setProfile] = useState({
         currentImage: 0,
@@ -23,7 +23,7 @@ function Aboutme({scrollToAboutme}){
     console.log(profile);
 
     return(
-        <div id="c1" className="section clearfix" ref={scrollToAboutme}>
+        <div id="c1" className="section clearfix">
             <div id="links">
                 <a href="https://github.com/myeon7" target="_blank">
                     <i className="fab fa-github"></i>
