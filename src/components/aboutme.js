@@ -51,7 +51,7 @@ function Aboutme({scrollToAboutme}){
                 <div className="intro">
                         <h3>Front-End Developer</h3>
                         <h3>Hi, I am Matthew!</h3>
-                        <span>I am a <b>Front-End Developer</b> with a <b>Business</b> background. I currently study strategic management and data analytics at Emory University's Goizueta Business School and self-taught coding. My passion lie at the intersection of technology, design and business, and I'm always looking for new ways to integrate my analytical and creative skills.</span>
+                        <span>I am a <b>Front-End Developer</b> with a <b>Business</b> background. I currently study strategic management and data analytics at Emory University's Goizueta Business School and self-taught coding. My passion lies at the intersection of technology, design, and business, and I'm always looking for new ways to integrate my analytical and creative skills.</span>
                         <span>Language: <b>Python, HTML, CSS, JS, React, NodeJS, R, MySQL</b></span>
                 </div>
             </div>
