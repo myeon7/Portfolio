@@ -26,7 +26,7 @@ body,h1,h2,h3,h4,h5,h6,button {
 a {text-decoration:none; color:#fff;}
 ul,ol,li {list-style:none;}
 img,fieldset {border:none; vertical-align:middle;}
-strong,em,i,address {font-weight:normal; font-style:normal;}
+strong,em,address {font-weight:normal; font-style:normal;}
 table {border-collapse:collapse;}
 
 button {

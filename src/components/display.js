@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useCallback, useEffect } from 'react';
 
 function Prototype(prototype){
     return(
@@ -12,9 +12,9 @@ function Prototype(prototype){
 function FinalPart({project}){
     return(
         <div className="inner_last">
-            <h3>{project.final_header1}</h3>
+            <h3 className="title">{project.final_header1}</h3>
             <p className="inner_text">{project.final_text1}</p>
-            <h3>{project.final_header2}</h3>
+            <h3 className="title">{project.final_header2}</h3>
             <p className="inner_text">{project.final_text2}</p>
         </div>
     )
@@ -24,6 +24,19 @@ function Display({project, toggleShow}) {
 
     const scrolltoTop = useRef();
     // const top = window.pageYOffset || document.documentElement.scrollTop
+
+    // ** Press ESC Key to exit display
+    // const esc = useCallback(e => {
+    //     if(e.key === "Escape"){
+    //         toggleShow();
+    //     }
+    // }, []);
+    // useEffect(() => {
+    //     document.addEventListener("keydown", esc, false);
+    //     return () => {
+    //         document.removeEventListener("keydown", esc, false);
+    //     };
+    // }, []);
 
     return(
         <>
@@ -62,13 +75,49 @@ function Display({project, toggleShow}) {
                         }
 
 {/* PROJECT CONTENTS */}
+                        <p className="inner_text title">{project.t1_title}</p>
                         <p className="inner_text">{project.text1}</p>
                         <img src={project.image1} alt=""/>
+                        <p className="inner_text title">{project.t2_title}</p>
                         <p className="inner_text">{project.text2}</p>
                         <img src={project.image2} alt=""/>
+                        <p className="inner_text title">{project.t3_title}</p>
                         <p className="inner_text">{project.text3}</p>
                         <img src={project.image3} alt=""/>
+                        <p className="inner_text title">{project.t4_title}</p>
                         <p className="inner_text">{project.text4}</p>
+                        <img src={project.image4} alt=""/>
+                        <p className="inner_text title">{project.t5_title}</p>
+                        <p className="inner_text">{project.text5}</p>
+                        <img src={project.image5} alt=""/>
+
+                        { project.t6_title && 
+                            <>
+                                <p className="inner_text title">{project.t6_title}</p>
+                                <p className="inner_text">{project.text6}</p>
+                                <img src={project.image6} alt=""/>
+                                <p className="inner_text title">{project.t7_title}</p>
+                                <p className="inner_text">{project.text7}</p>
+                                <img src={project.image7} alt=""/>
+                                <p className="inner_text title">{project.t8_title}</p>
+                                <p className="inner_text">{project.text8}</p>
+                                <img src={project.image8} alt=""/>
+                                <p className="inner_text title">{project.t9_title}</p>
+                                <p className="inner_text">{project.text9}</p>
+                                <img src={project.image9} alt=""/>
+                                <p className="inner_text title">{project.t10_title}</p>
+                                <p className="inner_text">{project.text10}</p>
+                                <img src={project.image10} alt=""/>
+                                <p className="inner_text title">{project.t11_title}</p>
+                                <p className="inner_text">{project.text11}</p>
+                                <img src={project.image11} alt=""/>
+                                <p className="inner_text title">{project.t12_title}</p>
+                                <p className="inner_text">{project.text12}</p>
+                                <img src={project.image12} alt=""/>
+                                <p className="inner_text title">{project.t13_title}</p>
+                                <p className="inner_text">{project.text14}</p>
+                            </>
+                        }
                     </div>
                     
                     { project.final_header1 && <FinalPart project={project}/> }
