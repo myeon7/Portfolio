@@ -121,6 +121,7 @@ function Display({project, toggleShow}) {
                     </div>
                     
                     { project.final_header1 && <FinalPart project={project}/> }
+                    { project.other_links && <div className="references"><b>Reference</b>: {project.other_links}</div> }
                 </div>
             </div>
         </>

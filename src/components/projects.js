@@ -50,8 +50,8 @@ function Projects(){
             title: "YouTube Clone",
             cover: mytube_cover,
             type: "(Personal Project)",
-            prototype: "",
-            description: "ReactJS & YouTube API (Postman)",
+            prototype: "https://mytube-youtubeclone.netlify.app/",
+            description: "ReactJS & YouTube API",
             time: "Jul 2021 - Aug 2021",
             // content
             task: "Cloning YouTube to learn how to develop a project using external API data",
@@ -94,11 +94,28 @@ function Projects(){
                 'I used iconfinder to get icon images '
             ],
             t13_title: "",
-            text14: [
-                'For the maintenance and privacy purposes, I seperated my API key in a different file using constructor method.'
+            text13: [
+                'For the maintenance and privacy purposes, I seperated my API key in a .env file and have it loaded using constructor method.'
             ],
-            final_header1: "",
-            final_text1: "",
+            t14_title: "Async and ",
+            text14: [
+                ''
+            ],
+            final_header1: "Challenge",
+            final_text1: [
+                "In the process of requesting and getting data from YouTube API, it took me a while to comprehend the concept of ",
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" alt="promise MDN"><b>Promise</b></a>,
+                " and ",
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank" alt="async MDN"><b>Async</b></a>,
+                " because I wasn't familiar with the usage of callback function in ",
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous" target="_blank" alt="asynchronous JavaScript"><b>asynchronous JavaScript</b></a>, 
+                ". Thus, only after understanding about call back function and execution of different Promise states, I could finally see how async & await works to return requested API data as Promise object.", <br/>,
+                "Another challenge was when loading data through search. When I fetched data for the 'mostPopular' list, I included 'part=snippet' in the URL inside callback function but not for 'search' result. I simply needed to include 'part=snippet' in the 'search' URL, but it took me a while to figure this out."
+            ],
+            other_links: [
+                <a href="https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261" target="_blank">Master the JS Interview: Promise</a>,
+                " / ",
+            ]
         },
         {
             title: "Spotify Machine Learning Song Recommendation",
@@ -125,7 +142,7 @@ function Projects(){
             role: "UI Designer | Web Developer",
             original: lulu_original,
             renewal: lulu_main,
-            text1: "This is my first coding project to develop a static website since I decided to be a Front-end Developer from a UI/UX Designer. I designed the renewal template using Figma and contents acquired from lululemon's official website. Then I used basic HTML and CSS to develop the front-end part of each page and applied JavaScript (mainly JQuery) to include dynamics and animations to improve the level of engagement in user interface.",
+            text1: "This is my first coding project to develop a static website ever since I decided to be a Front-end Developer from a UI/UX Designer. I designed the renewal template using Figma and contents acquired from lululemon's official website. Then I used basic HTML and CSS to develop the front-end part of each page and applied JavaScript (mainly JQuery) to include dynamics and animations to improve the level of engagement in the user interface.",
             image1: lulu_benchmark,
             t2_title: "Benchmarking and Design Process",
             text2: [
@@ -151,7 +168,7 @@ function Projects(){
                 "My coding skill was limited because I only started learning HTML / CSS / JQuery a few months ago. So, I often needed to check page inspect to learn how certain styling works and compare with ",
                 <a href="https://animista.net/" target="_blank" alt="animista.net"><b> animista.net</b></a>, 
                 " or other online sources to understand and modify them. In this process, I also learned to use external JS libraries and manage them. For instance, I handled all the sliders using ", 
-                <a href="https://swiperjs.com/" target="_blank" alt="Swiperjs"><b>swiperjs</b></a>, "."
+                <a href="https://swiperjs.com/" target="_blank" alt="Swiperjs"><b>Swiperjs</b></a>, "."
             ],
             image4: lulu_svgmotion,
             t5_title: "SVG Motion",
@@ -172,7 +189,7 @@ function Projects(){
             final_text2: [
                 "In the midway through this project, I started learning ", 
                 <a href="https://reactjs.org/" target="_blank" alt="ReactJS"><b>ReactJS</b></a>, 
-                " and realized how efficient and less complicated this project coding structure could have been with React - I could simply build a component and reuse it instead of copying and pasting repeated components on every HTML document. Therefore, I will be using React and external API (instead of manually downloading content from the website) for my next project. I will also study more in-depth about canvas graphics, webGL and other JS libraries to display advance graphics and motions in future projects.", 
+                " and realized how efficient and less complicated this project coding structure could have been with React - I could simply build a component and reuse it instead of copying and pasting repeated components on every HTML document. Thus,, I will most likely use React and external API (instead of manually downloading content from the website) for my next project. I also plan to study more in-depth about canvas graphics, webGL and other JS libraries to display advance graphics and motions in my future projects.", 
                 <br/>, <br/>,
                 "(", <b>P.S.</b>, ") Currently, only '", 
                 <a href="https://lululemon-renewal.netlify.app/index.html" target="_blank"><b>Home</b></a>, 
