@@ -111,14 +111,14 @@ function Projects(){
                 "3. Access API with ", <a href="https://www.postman.com/" target="_blank" alt="postman link"><b>Postman</b></a>,
             ],
             text6: [
-                "To ensure the API data get properly loaded through HTTP requests, I used ", <b>Postman</b>, " to test the YouTube API. I first created a new collection and entered API key in the ", <b>Authorization</b>, " section and set the base link (main URL) in a ", <b>Variable</b>, ". Then, I added new requests (ex. Search, Videos) in the collection I intially creted, and entered key and value inputs in a format that is listed in the request parameters from the ", 
-                <a href="https://developers.google.com/youtube/v3/docs/search/list" target="_blank" alt="Youtube Developer page"><b>YouTube developer page overview</b></a>, ". ", <br/>, <br/>, <b>Note:</b>, <i> if the data fails to load, check the API key or the base link to see if there is an extra slash at the end - this happened to me.</i>
+                "To ensure the API data get properly loaded through HTTP requests, I used ", <b>Postman</b>, " to test the YouTube API. I first created a new collection and entered API key in the ", <b>Authorization</b>, " section and set the base link (main URL) in a ", <b>Variable</b>, ". Then, I added new requests (ex. Search, Videos) in the collection and entered key and value inputs in a format that is listed in the ", 
+                <a href="https://developers.google.com/youtube/v3/docs/search/list" target="_blank" alt="Youtube Developer page"><b>YouTube developer page overview</b></a>, <b> request parameters</b>, ".", <br/>, <br/>, <b>Note:</b>, <i> if the data fails to load, check the API key or the base link to see if there is an extra slash at the end - this happened to me.</i>
             ],
             image6: mytube_img6, 
             // t7_title: "Title",
             text7: [
                 'Postman also provides code snippet to connect API in all languages for developers. So I selected ',<b>"JavaScript - Fetch"</b>,
-                ' (code that allows JavaScript to connect API using fetch method) and pasted to my ReactJS project code inside "useEffect(() => { ____ }, [])" of app.jsx. ', <br/>, <br/>, <b>Note:</b>,
+                ' (code that allows JavaScript to connect API using fetch method) and pasted to my ReactJS project code inside "useEffect(() => { _____ }, [])" of app.jsx. ', <br/>, <br/>, <b>Note:</b>,
                 <i> Code Snippet only connects to API and additional options must be modified accordingly by the developer to perform as intended.</i>
             ],
             image7: mytube_img7,
@@ -135,9 +135,9 @@ function Projects(){
                 ' file and loaded the key into the project through the constructor method. I created a seperate component: ', <b>youtube.js</b>, ' to manage all the services - different ways of loading data from API with fetch method (async & await).', <br/>, <br/>, <b>Note:</b>, <i> Two solutions when sensitive data (ex. API key) gets accidently pushed to github: use <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository" target="_blank" alt="BFG repo-clearner"><b>BFG Repo-Cleaner</b></a> (suggested for team project) or <b>Regenerate API Key</b> (suggested for personal project).</i>
             ],
             image9: mytube_img9,
-            t10_title: "6. Async & Await",
+            t10_title: "6. Modifying App.jsx",
             text10: [
-                "I created youtube.js to manage all the API data requests using 'async & await' callback method instead of fetch method to improve search function performance. And the modified code in app.jsx is now much cleaner."
+                "Now that all API data handling is serviced through ", <b>youtube.js</b>, " component, I modified the App.jsx to handle all the requests through the props.",
             ],
             image10: mytube_img10,
             t11_title: "7. Component: video_detail",
@@ -147,7 +147,7 @@ function Projects(){
             image11: mytube_img11,
             t12_title: "8. Axios | fetch()",
             text12: [
-                "Axios is an HTTP asynchronous connection library that uses Promise(ES6) API for Browser / Node.js. It not only uses XMLHttpsRequest or Node.js depending on the environment of the broweser, but also provides many advanced features that are not available in other similar APIs. (Install: 'yarn add axios')"
+                <b>Axios [yarn add axios]</b>, " is an HTTP asynchronous connection module that uses Promise(ES6) API for browser and Node.js. It uses XMLHttpsRequest or Node.js depending on the environment of the browser and provides many more advanced features that are not available in other similar APIs."
             ],
             final_header1: "Challenge",
             final_text1: [
@@ -157,12 +157,12 @@ function Projects(){
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank" alt="async MDN"><b>Async</b></a>,
                 " because I wasn't familiar with the usage of callback function in ",
                 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous" target="_blank" alt="asynchronous JavaScript"><b>asynchronous JavaScript</b></a>, 
-                ". Thus, only after understanding about callback function and execution of different Promise states, I could finally see how async & await works to return requested API data as Promise object.", <br/>, <br/>,
-                "Another challenge was when loading data through search. When I fetched data for the 'mostPopular' list, I included 'part=snippet' in the URL inside callback function but not for 'search' result. I simply needed to include 'part=snippet' in the 'search' URL, but it took me a while to figure this out."
+                ". Thus, only after understanding about callback function and execution of different Promise states, I could finally see how async & await works and returns requested API data as Promise object.", <br/>, <br/>,
+                "Another challenge was to load search results in ReactJS. When I fetched data for the 'mostPopular' list, I included 'part=snippet' in the URL inside callback function to get more detailed information of the video but not for 'search' request URL. I just had to include 'part=snippet' in the 'search' URL to match the format of requested data structure, but it took me a while to figure this out."
             ],
             final_header2: "Future Plan",
             final_text2: [
-                "I will continue to develop MYTube to be more like a real YouTube or think of an innovative way to display contents. In my next project, I plan to work on another API cloning project to get myself more familiar developing front-end components with contents provided from the back-end (API). Once I become more familar with front-end development using external API, I would like to try building my own API.",
+                "I will continue to develop MYTube to be more like a real YouTube or think of an innovative way to display contents. In my next project, I plan to work on another API cloning project to be more familiar developing front-end components with contents provided from the back-end (API). I also would like to try building my own API if I get a chance.",
             ],
             other_links: [
                 <a href="https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261" target="_blank">Master the JS Interview: Promise</a>,
