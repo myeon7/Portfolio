@@ -115,7 +115,7 @@ function Display({project, toggleShow}) {
                                 <p className="inner_text">{project.text12}</p>
                                 <img src={project.image12} alt=""/>
                                 <p className="inner_text title">{project.t13_title}</p>
-                                <p className="inner_text">{project.text14}</p>
+                                <p className="inner_text">{project.text13}</p>
                             </>
                         }
                     </div>

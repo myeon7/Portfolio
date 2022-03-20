@@ -7,10 +7,22 @@ import chocoblock_cover from '../media/projects/chocoblock_cover.jpg';
 import lululemon_cover from '../media/projects/lululemon_cover.jpg';
 import spotifyrec_cover from '../media/projects/spotifyrec_cover.jpg';
 import design_cover from '../media/projects/design_cover.jpg';
-// Project: Lululemon
+// Project: Portfolio
 import portfolio_img1 from '../media/projects/portfolio_img1.jpg';
 import portfolio_img2 from '../media/projects/portfolio_img2.jpg';
 import portfolio_img3 from '../media/projects/portfolio_img3.jpg';
+// Project: MYTube
+import mytube_img1 from '../media/projects/mytube_img1.png';
+import mytube_img2 from '../media/projects/mytube_img2.png';
+import mytube_img3 from '../media/projects/mytube_img3.png';
+import mytube_img4 from '../media/projects/mytube_img4.png';
+import mytube_img5 from '../media/projects/mytube_img5.png';
+import mytube_img6 from '../media/projects/mytube_img6.png';
+import mytube_img7 from '../media/projects/mytube_img7.png';
+import mytube_img8 from '../media/projects/mytube_img8.png';
+import mytube_img9 from '../media/projects/mytube_img9.png';
+import mytube_img10 from '../media/projects/mytube_img10.png';
+import mytube_img11 from '../media/projects/mytube_img11.png';
 // Project: Lululemon
 import lulu_original from '../media/projects/lululemon_original.jpg';
 import lulu_main from '../media/projects/lululemon_main.jpg';
@@ -56,50 +68,86 @@ function Projects(){
             // content
             task: "Cloning YouTube to learn how to develop a project using external API data",
             role: "Front-End Developer",
-            t1_title: "Getting started for YouTube Data API",
-            text1: [
-                "[",
-                <a href="" target="_blank" alt=""><b>YouTube Data API</b></a>, " → ", 
-                <b>Reference</b>, " → ",
-                <b>Overview</b>, " → ",
-                <b>Calling API</b>, " → ",
-                <a href="" target="_blank" alt="Developer Console"><b>Developer Console's API Access</b></a>,
-                "]"
-            ],
-            t2_title: [
-                "Create a Project in ",
-                <a href="" target="_blank" alt="Google Cloud Platform"><b>Google Cloud Platform</b></a>, 
-                " to use API",
-            ],
+            image1: mytube_img1,
+            t2_title: "1. Set up for YouTube Data API",
             text2: [
                 "[",
-                <b>Create Project</b>, " → Create ", <b>MYTube</b>, 
+                <a href="https://console.cloud.google.com/apis/dashboard" target="_blank" alt=""><b>YouTube Data API</b></a>, " → ", 
+                <b>Reference</b>, " → ",
+                <b>Overview</b>, " (Calling API)", " → ",
+                <a href="" target="_blank" alt="Developer Console"><b>Developer Console's API Access</b></a>,  " → ",
+                <b>Create Project (MYTube)</b>,
+                "]", <br/>,
+                "To access YouTube Data API, I first created a new project in ",
+                <a href="" target="_blank" alt="Google Cloud Platform"><b>Google Cloud Platform</b></a>, 
+                " to acquire API access key.",
+            ],
+            image2: mytube_img2,
+            text3: [
+                "[",
+                <b>Navigation Menu</b>, " → ",
+                <b>APIs & Services</b>, " → ",
+                <b>Library</b>, " → ",
+                <b>YouTube Data API v3</b>, " (Enable)",
                 "]", <br/>, 
-                "Create a project in Google Cloud Platform to get a unique API Key - which will be used to access APIs."
+                "After creating a new project, I selected and enabled the API that would be used for the project from the APIs Library.", 
             ],
+            image3: mytube_img3,
             // text3: ["I used ", <a href="https://www.postman.com/" target="_blank" alt="postman link"><b>Postman</b></a>, " to manage API database"],
-            t10_title: "Using Postman",
+            // t4_title: "Validating Credentials",
+            text4: [
+                "Then, I created credentials to get a unique API key to access the selected API. (The basic set up to access YouTube API is now completed)",
+            ],
+            image4: mytube_img4,
+            t5_title: "2. Testing API Access",
+            text5: [
+                "The YouTube API allows developers to try its API on the platform itself. This was very helpful because it allowed me to conveniently check how and in what structure the data get loaded when I request them. I tried testing '",
+                <a href="https://developers.google.com/youtube/v3/docs/search/list" target="_blank" alt=""><b>Search: list</b></a>, "' and '",
+                <a href="https://developers.google.com/youtube/v3/docs/videos/list" target="_blank" alt=""><b>Video: list</b></a>, 
+                "' by entering some basic inputs (I disabled '", <b>Google OAuth 2.0</b>, "' because I was only requesting public data, so no need for verification).",
+            ],
+            image5: mytube_img5,
+            t6_title: [
+                "3. Access API with ", <a href="https://www.postman.com/" target="_blank" alt="postman link"><b>Postman</b></a>,
+            ],
+            text6: [
+                "To ensure the API data get properly loaded through HTTP requests, I used ", <b>Postman</b>, " to test the YouTube API. I first created a new collection and entered API key in the ", <b>Authorization</b>, " section and set the base link (main URL) in a ", <b>Variable</b>, ". Then, I added new requests (ex. Search, Videos) in the collection I intially creted, and entered key and value inputs in a format that is listed in the request parameters from the ", 
+                <a href="https://developers.google.com/youtube/v3/docs/search/list" target="_blank" alt="Youtube Developer page"><b>YouTube developer page overview</b></a>, ". ", <br/>, <br/>, <b>Note:</b>, <i> if the data fails to load, check the API key or the base link to see if there is an extra slash at the end - this happened to me.</i>
+            ],
+            image6: mytube_img6, 
+            // t7_title: "Title",
+            text7: [
+                'Postman also provides code snippet to connect API in all languages for developers. So I selected ',<b>"JavaScript - Fetch"</b>,
+                ' (code that allows JavaScript to connect API using fetch method) and pasted to my ReactJS project code inside "useEffect(() => { ____ }, [])" of app.jsx. ', <br/>, <br/>, <b>Note:</b>,
+                <i> Code Snippet only connects to API and additional options must be modified accordingly by the developer to perform as intended.</i>
+            ],
+            image7: mytube_img7,
+            t8_title: "4. Creating Components: video_list, video_item, search_header",
+            text8: [
+                "To conveniently parse and handle API data, I changed the returning response value type from ",
+                <b>response.text()</b>, " to ", <b>response.json()</b>, ". Then I created three components: ", <b>video_list</b>, ", ", <b>video_item</b>, " and ", <b>search_header</b>, " to show extracted API data in basic YouTube content display format. I managed styling through ", <a href="https://postcss.org/" target="_blank" alt="postcss"><b>PostCSS</b></a>, " to avoid potential overlapping of class names."
+            ],
+            image8: mytube_img8,
+            t9_title: "5. Secure API Key",
+            text9: [
+                'For the maintenance and privacy purposes, I seperated my API key to the ',
+                <b>.env</b>, 
+                ' file and loaded the key into the project through the constructor method. I created a seperate component: ', <b>youtube.js</b>, ' to manage all the services - different ways of loading data from API with fetch method (async & await).', <br/>, <br/>, <b>Note:</b>, <i> Two solutions when sensitive data (ex. API key) gets accidently pushed to github: use <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository" target="_blank" alt="BFG repo-clearner"><b>BFG Repo-Cleaner</b></a> (suggested for team project) or <b>Regenerate API Key</b> (suggested for personal project).</i>
+            ],
+            image9: mytube_img9,
+            t10_title: "6. Async & Await",
             text10: [
-                'Postman provides code snippet to connect API in all languages for developers. So I selected ',<b>"JavaScript - Fetch"</b>,
-                ' (code that allows JavaScript to connect API in Fetch method) and pasted into my ReactJS project inside "useEffect(() => { ____ }, [])". ', 
-                <i>(Note: Code Snippet only connects to API and the rest option must be modified accordingly to the purpose of the project by the developer.)</i>
+                "I created youtube.js to manage all the API data requests using 'async & await' callback method instead of fetch method to improve search function performance. And the modified code in app.jsx is now much cleaner."
             ],
-            t11_title: "Creating Components: video_list, video_item",
+            image10: mytube_img10,
+            t11_title: "7. Component: video_detail",
             text11: [
-                'To conveniently parse and handle data, I changed the returning response value type: response.text() → response.json(). Then I created two components: video_list and video_item to display content extracted from API data on the screen. And I handled styling through ',
-                <b>PostCSS</b>, '. (((I wanted to try using PostCSS - 클래스명이 충돌나지 않게 .module.css로 which is already part of create react app.))) '
+                'Created a seperate component that displays the content and its information when a video gets selected (clicked).'
             ],
-            t12_title: "Search Component",
+            image11: mytube_img11,
+            t12_title: "8. Axios | fetch()",
             text12: [
-                'I used iconfinder to get icon images '
-            ],
-            t13_title: "",
-            text13: [
-                'For the maintenance and privacy purposes, I seperated my API key in a .env file and have it loaded using constructor method.'
-            ],
-            t14_title: "Async and ",
-            text14: [
-                ''
+                "Axios is an HTTP asynchronous connection library that uses Promise(ES6) API for Browser / Node.js. It not only uses XMLHttpsRequest or Node.js depending on the environment of the broweser, but also provides many advanced features that are not available in other similar APIs. (Install: 'yarn add axios')"
             ],
             final_header1: "Challenge",
             final_text1: [
@@ -109,12 +157,17 @@ function Projects(){
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank" alt="async MDN"><b>Async</b></a>,
                 " because I wasn't familiar with the usage of callback function in ",
                 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous" target="_blank" alt="asynchronous JavaScript"><b>asynchronous JavaScript</b></a>, 
-                ". Thus, only after understanding about call back function and execution of different Promise states, I could finally see how async & await works to return requested API data as Promise object.", <br/>,
+                ". Thus, only after understanding about callback function and execution of different Promise states, I could finally see how async & await works to return requested API data as Promise object.", <br/>, <br/>,
                 "Another challenge was when loading data through search. When I fetched data for the 'mostPopular' list, I included 'part=snippet' in the URL inside callback function but not for 'search' result. I simply needed to include 'part=snippet' in the 'search' URL, but it took me a while to figure this out."
+            ],
+            final_header2: "Future Plan",
+            final_text2: [
+                "I will continue to develop MYTube to be more like a real YouTube or think of an innovative way to display contents. In my next project, I plan to work on another API cloning project to get myself more familiar developing front-end components with contents provided from the back-end (API). Once I become more familar with front-end development using external API, I would like to try building my own API.",
             ],
             other_links: [
                 <a href="https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261" target="_blank">Master the JS Interview: Promise</a>,
                 " / ",
+                <a href="https://blog.bitsrc.io/the-power-of-axios-cf45e085d924" target="_blank">Power of Axios</a>,
             ]
         },
         {
