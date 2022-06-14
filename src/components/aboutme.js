@@ -1,27 +1,6 @@
-import React, { useState } from 'react';
-import pi1 from '../media/profileimg/Profile-01.jpg';
-import pi2 from '../media/profileimg/Profile-02.jpg';
-import pi3 from '../media/profileimg/Profile-03.jpg';
-import pi4 from '../media/profileimg/Profile-04.jpg';
-import pi5 from '../media/profileimg/Profile-05.jpg';
-import pi6 from '../media/profileimg/Profile-06.jpg';
+import React from 'react';
 
 function Aboutme(){
-
-    const [profile, setProfile] = useState({
-        currentImage: 0,
-        images: [{
-            profile_img1: pi1,
-            profile_img2: pi2,
-            profile_img3: pi3,
-            profile_img4: pi4,
-            profile_img5: pi5,
-            profile_img6: pi6,
-        }]
-    });
-
-    console.log(profile);
-
     return(
         <div id="c1" className="section clearfix">
             <div id="links">
@@ -49,9 +28,9 @@ function Aboutme(){
             <div className="aboutme_content">
                 <div className="profileimg"></div>
                 <div className="intro">
-                        <h3>Front-End Developer</h3>
+                        <h3>Full Stack Developer</h3>
                         <h3>Hi, I am Matthew!</h3>
-                        <span>I am a <b>Front-End Developer</b> with a <b>Business</b> background. I currently study strategic management and data analytics at Emory University's Goizueta Business School and self-taught coding. My passion lies at the intersection of technology, design, and business, and I'm always looking for new ways to integrate my analytical and creative skills.  </span>
+                        <span>I am a <b>Full Stack Developer</b> with a <b>Business</b> background. I currently study strategic management and data analytics at Emory University's Goizueta Business School and self-taught coding. My passion lies at the intersection of technology, design, and business, and I'm always looking for new ways to integrate my analytical and creative skills.</span>
                         <span>Language: <b>Python</b>, <b>HTML</b>, <b>CSS</b>, <b>JS</b>, <b>React</b>, <b>NodeJS</b>, <b>R</b>, <b>MySQL</b></span>
                 </div>
             </div>
