@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Portfolio Link: m.jiwooyeon.com
+Portfolio Link: m.jiwooyeon.com (https:m.jiwooyeon.com).
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
